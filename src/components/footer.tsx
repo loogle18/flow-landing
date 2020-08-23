@@ -9,7 +9,7 @@ const Footer: React.FC = () => (
           <img
             src={logo}
             alt='logo'
-            style={{ width: '55px', paddingLeft: '8' }}
+            style={{ width: '55px' }}
           />
         </div>
 
