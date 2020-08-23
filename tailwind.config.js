@@ -13,25 +13,11 @@ module.exports = {
     colors: {
       black: '#000000',
       white: '#ffffff',
-      primary: '#1652F0',
-      secondary: '#212121',
+      primary: '#FABE0D',
+      secondary: '#151515',
       light: '#f5f5f5',
       gray: '#575961',
-      dark: '#16171B', //
-      success: '#00CD98',
-      info: '#17a2b8',
-      warning: '#F6B900',
-      danger: '#F46E6E',
-      blue: '#007bff',
-      indigo: '#6610f2',
-      purple: '#5351FB',
-      pink: '#e83e8c',
-      red: '#F46E6E',
-      orange: '#fd7e14',
-      yellow: '#F6B900',
-      green: '#00CD98',
-      teal: '#20c997',
-      cyan: '#17a2b8',
+      dark: '#16171B',
     },
     fontSize: {
       xs: '0.75rem',
@@ -43,10 +29,9 @@ module.exports = {
       '3xl': '2.5rem',
       '4xl': '3rem',
     },
-    extend: {
-      fontFamily: {
-        mono: ['SFMono-Regular'],
-      },
+    fontFamily: {
+      flow: ['"IBM Plex Sans"', 'sans-serif'],
+      'flow-mono': ['"IBM Plex Mono"', 'monospace'],
     },
   },
   variants: {
