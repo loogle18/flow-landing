@@ -24,7 +24,7 @@ const Hero: React.FC<IHero> = ({ flowprice }) => {
           </p>
 
           <h3 className='text-lg my-10'>
-            Current price per once Flow is ${Number(flowprice).toFixed(2)}
+            Current price per Flow is ${Number(flowprice).toFixed(2)}
           </h3>
           <div className='mt-10 space-x-10'>
             <SecondaryButton text='Airdrop' />
