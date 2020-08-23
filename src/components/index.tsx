@@ -1,3 +1,3 @@
-import { Component } from './example';
-
-export { Component };
+export * from './header';
+export * from './footer';
+export * from './main';
