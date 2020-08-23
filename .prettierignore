@@ -1,0 +1,5 @@
+node_modules
+src/serviceWorker.ts
+src/styles/theme.css
+package-lock.json
+build
