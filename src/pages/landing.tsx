@@ -18,11 +18,12 @@ class Landing extends React.Component<{}, IState> {
     this.getCurrentPrice();
   }
 
-  getCurrentPrice() {
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => this.setState({ current_price: data.tickers[0].converted_last['usd'] }));
+  async getCurrentPrice() {
+    const response = await fetch(apiUrl);
+    const json = await response.json();
+    this.setState({ current_price: json.tickers[0].converted_last['usd'] });
   }
+
   render() {
     const { current_price } = this.state;
     return (
