@@ -15,11 +15,11 @@ const Landing: React.FC = () => {
   }, []);
 
   return (
-      <div className='flex flex-col min-h-screen'>
-        <Header price={currentPrice} />
-        <Main />
-        <Footer />
-      </div>
+    <div className='flex flex-col min-h-screen'>
+      <Header price={currentPrice} />
+      <Main />
+      <Footer />
+    </div>
   );
 };
 export default Landing;
