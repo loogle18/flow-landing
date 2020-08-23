@@ -1,5 +1,6 @@
-import React, { FC } from "react"
+import React, { FC } from 'react';
+import { Landing } from './pages';
 
-const App: FC = () => <></>
+const App: FC = () => <Landing />;
 
-export default App
+export default App;

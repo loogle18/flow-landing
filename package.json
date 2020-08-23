@@ -9,12 +9,17 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
+    "tailwindcss": "^1.7.3",
     "typescript": "^3.7.5"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier": "prettier --write .",
+    "typecheck": "tsc",
+    "build:app": "react-scripts build",
+    "build:theme": "tailwind build src/styles/builder.css > src/styles/theme.css",
+    "build": "npm run typecheck && npm run prettier && npm run build:theme && npm run build:app"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
   }
 }
