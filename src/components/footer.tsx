@@ -1,16 +1,12 @@
 import React from 'react';
-import logo from '../images/logo-main.png';
+import logo from '../assets/logo-main.png';
 
 const Footer: React.FC = () => (
   <footer className='bg-gray-100'>
-    <div className='container mx-auto pt-8 pb-4'>
+    <div className='container mx-auto pt-8 pb-4 hidden md:block'>
       <div className='flex flex-wrap overflow-hidden sm:-mx-1 md:-mx-px lg:-mx-2 xl:-mx-2'>
         <div className='w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6'>
-          <img
-            src={logo}
-            alt='logo'
-            style={{ width: '55px' }}
-          />
+          <img src={logo} alt='logo' style={{ width: '55px' }} />
         </div>
 
         <div className='w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6'>
