@@ -25,3 +25,7 @@ a:hover {
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */
+
+.disable-zoom-tap {
+  touch-action: manipulation;
+}
