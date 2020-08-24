@@ -1,5 +1,5 @@
 import React from 'react';
-import Bubbles from '../assets/bubbles.svg';
+import Bubbles from '../assets/bg.svg';
 import Radial from '../assets/radial.png';
 import { PrimaryButton, SecondaryButton } from '.';
 
@@ -11,10 +11,10 @@ const Hero: React.FC<IHero> = ({ flowprice }) => {
   return (
     <section
       style={{ backgroundImage: `url(${Bubbles})` }}
-      className={`px-4 py-20  bg-local object-fill bg-secondary text-white flex`}>
+      className={`px-4 py-10 md:py-20  bg-local text-center md:text-left object-fill bg-secondary text-white flex`}>
       <div className='container mx-auto flex'>
         <div className='flex-1'>
-          <h1 className='text-2xl sm:text-4xl sm:text font-bold border-primary border-l-4 pl-4 mb-4'>
+          <h1 className='text-2xl sm:text-4xl sm:text font-bold border-primary md:border-l-4 md:pl-4 mb-4'>
             The self-distributing store of value token with daily intrest.
           </h1>
           <p className='sm:text-lg font-light'>

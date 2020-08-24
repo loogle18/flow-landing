@@ -11,7 +11,7 @@ const Section: React.FC<ISection> = ({ bgcolor, title, paragraph, image, childre
   let text = !bgcolor ? 'dark' : 'white';
   let borderColor = !bgcolor ? 'secondary' : 'primary';
   return (
-    <section className={`p-4 py-20 bg-${bg} text-${text}  `}>
+    <section className={`px-6 py-20 bg-${bg} text-${text}  `}>
       <div className='container mx-auto flex items-center'>
         <div className='flex-1'>
           <h2 className={`text-2xl sm:text-3xl border-l-4 border-${borderColor} pl-4 mb-4`}>

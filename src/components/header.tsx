@@ -1,43 +1,44 @@
-import React from 'react';
-// import logo from '../images/logo-main.png';
+import React, { useState } from 'react';
 import logoAlternative from '../assets/logo-white.png';
+import { CgMenu, CgClose } from 'react-icons/cg';
 
-const Header: React.FC = () => (
-  <header className='bg-secondary'>
-    <nav className='container mx-auto flex items-center justify-between flex-wrap p-3'>
-      <span className='flex text-2xl text-white items-center'>
-        <img src={logoAlternative} alt='logo' className='h-16 mr-4' /> Flow
-      </span>
-      <div className='space-x-10 hidden lg:block'>
-        <a
-          href='https://flowprotocol.io/static/media/flow-protocol.df8f84c5.pdf'
-          target='_BLANK'
-          rel='noopener noreferrer'
-          className='font-flow block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white'>
-          Whitepaper
-        </a>
-        <a
-          href='https://github.com/flowprotocol/flow-contracts'
-          target='_BLANK'
-          rel='noopener noreferrer'
-          className='font-flow block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white'>
-          Github
-        </a>
-        <a
-          href='#socials'
-          className='font-flow block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white'>
-          Connect
-        </a>
-        <a
-          href='https://flowprotocol.io/dashboard'
-          target='_BLANK'
-          rel='noopener noreferrer'
-          className='font-flow block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white'>
-          Dashboard
-        </a>
-      </div>
-    </nav>
-  </header>
-);
-
+const Header: React.FC = () => {
+  const [toggle, setToggle] = useState(false);
+  const mobileNav = toggle ? 'block' : 'hidden';
+  return (
+    <header className='bg-secondary'>
+      <nav className='container mx-auto md:flex items-center justify-between flex-wrap px-5 sm:px-0 py-5 text-white'>
+        <div className='flex text-xl md:text-2xl justify-between'>
+          <span className='flex items-center'>
+            <img src={logoAlternative} alt='logo' className='h-12 mr-4' /> Flow
+          </span>
+          <button
+            className='md:hidden text-2xl disable-zoom-tap'
+            onClick={() => setToggle(!toggle)}>
+            {!toggle ? <CgMenu /> : <CgClose />}
+          </button>
+        </div>
+        <div
+          className={`${mobileNav} mt-5 md:mt-0 md:flex space-y-5 md:space-y-0  md:space-x-10 flex flex-col md:flex-row items-center text-center`}>
+          <a
+            href='https://flowprotocol.io/static/media/flow-protocol.df8f84c5.pdf'
+            target='_BLANK'
+            rel='noopener noreferrer'>
+            Whitepaper
+          </a>
+          <a
+            href='https://github.com/flowprotocol/flow-contracts'
+            target='_BLANK'
+            rel='noopener noreferrer'>
+            Github
+          </a>
+          <a href='#socials'>Connect</a>
+          <a href='https://flowprotocol.io/dashboard' target='_BLANK' rel='noopener noreferrer'>
+            Dashboard
+          </a>
+        </div>
+      </nav>
+    </header>
+  );
+};
 export { Header };
