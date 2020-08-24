@@ -7,12 +7,14 @@ const Header: React.FC = () => {
   const mobileNav = toggle ? 'block' : 'hidden';
   return (
     <header className='bg-secondary'>
-      <nav className='container mx-auto md:flex items-center justify-between flex-wrap p-5 md:p-3 text-white'>
+      <nav className='container mx-auto md:flex items-center justify-between flex-wrap px-5 sm:px-0 py-5 text-white'>
         <div className='flex text-xl md:text-2xl justify-between'>
           <span className='flex items-center'>
-            <img src={logoAlternative} alt='logo' className='h-12 md:h-16 mr-4' /> Flow
+            <img src={logoAlternative} alt='logo' className='h-12 mr-4' /> Flow
           </span>
-          <button className='md:hidden text-2xl disable-zoom-tap' onClick={() => setToggle(!toggle)}>
+          <button
+            className='md:hidden text-2xl disable-zoom-tap'
+            onClick={() => setToggle(!toggle)}>
             {!toggle ? <CgMenu /> : <CgClose />}
           </button>
         </div>
