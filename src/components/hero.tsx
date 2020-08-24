@@ -3,7 +3,11 @@ import Bubbles from '../assets/bubbles.svg';
 import Radial from '../assets/radial.png';
 import { PrimaryButton, SecondaryButton } from '.';
 
-const Hero: React.FC = () => {
+interface IHero {
+  flowprice: string;
+}
+
+const Hero: React.FC<IHero> = ({ flowprice }) => {
   return (
     <section
       style={{ backgroundImage: `url(${Bubbles})` }}
@@ -18,6 +22,10 @@ const Hero: React.FC = () => {
             token (FLOW). FLOW is designed to be a hedge against Bitcoin as today's primary digital
             store of value.
           </p>
+
+          <h3 className='text-lg my-10'>
+            Current price per once Flow is ${Number(flowprice).toFixed(2)}
+          </h3>
           <div className='mt-10 space-x-10'>
             <SecondaryButton text='Airdrop' />
             <PrimaryButton text='Uniswap' />
