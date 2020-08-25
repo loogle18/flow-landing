@@ -1,7 +1,7 @@
 import React from 'react';
 import Bubbles from '../assets/bg.svg';
-import Radial from '../assets/radial.png';
 import { PrimaryButton, SecondaryButton } from '.';
+import Lottie from './lottie';
 
 interface IHero {
   flowprice: string;
@@ -32,7 +32,7 @@ const Hero: React.FC<IHero> = ({ flowprice }) => {
           </div>
         </div>
         <div className='hidden lg:flex flex-1 items-center justify-end'>
-          <img className='max-w-sm  ' src={Radial} alt='drops' />
+          <Lottie />
         </div>
       </div>
     </section>
