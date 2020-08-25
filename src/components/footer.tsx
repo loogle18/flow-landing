@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo-main.png';
+import logo from '../assets/logo-black.svg';
 
 const Footer: React.FC = () => (
  <footer className="footer bg-white relative pt-1 border-b-2 border-blue-700">

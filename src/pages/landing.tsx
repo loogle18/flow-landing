@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Section, Hero } from '../components';
-import Drops from '../assets/drops.png';
-import Defi from '../assets/defi.png';
-import Participation from '../assets/participation.png';
+import Drops from '../assets/drops.svg';
+import Defi from '../assets/defi.svg';
+import Block from '../assets/block.svg';
 
 import axios from 'axios';
 import { apiUrl } from '../utils/constants';
@@ -31,7 +31,7 @@ const Landing: React.FC = () => {
           to the full range of DeFi applications while still achieving its distribution target.'
       />{' '}
       <Section
-        image={Participation}
+        image={Block}
         bgcolor='secondary'
         title='Why do we need FLOW?'
         paragraph='Until now, digital stores of value like Bitcoin have required participation in mining or staking in order to receive a portion of the inflating supply. This has several problems:'>

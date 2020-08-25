@@ -21,7 +21,7 @@ const Section: React.FC<ISection> = ({ bgcolor, title, paragraph, image, childre
           {children}
         </div>
         <div className='hidden lg:flex flex-1 justify-end'>
-          <img className='max-w-xs' src={image} alt='' />
+          <img className='max-w-md' src={image} alt='' />
         </div>
       </div>
     </section>

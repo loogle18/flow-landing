@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logoAlternative from '../assets/logo-white.png';
+import logoAlternative from '../assets/logo-white.svg';
 import { CgMenu, CgClose } from 'react-icons/cg';
 
 const Header: React.FC = () => {
