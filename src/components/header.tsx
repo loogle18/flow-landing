@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logoAlternative from '../assets/logo-white.svg';
+import {ReactComponent as LogoAlternative} from '../assets/logo-light.svg';
 import { CgMenu, CgClose } from 'react-icons/cg';
 
 const Header: React.FC = () => {
@@ -9,8 +9,8 @@ const Header: React.FC = () => {
     <header className='bg-secondary'>
       <nav className='container mx-auto md:flex items-center justify-between flex-wrap px-5 sm:px-0 py-5 text-white'>
         <div className='flex text-xl md:text-2xl justify-between'>
-          <span className='flex items-center'>
-            <img src={logoAlternative} alt='logo' className='h-12 mr-4' /> Flow
+          <span className='flex items-center h-12 '>
+            <LogoAlternative /> Flow
           </span>
           <button
             className='md:hidden text-2xl disable-zoom-tap'
