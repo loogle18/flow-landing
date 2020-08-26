@@ -1,107 +1,67 @@
 import React from 'react';
-import { ReactComponent as DarkLogo } from '../assets/logo-dark.svg';
+// import { ReactComponent as DarkLogo } from '../assets/logo-dark.svg';
+
+interface IFooterLink {
+  href: string;
+  name: string;
+}
+
+interface IFooterItem {
+  title: string;
+  linkArr: IFooterLink[];
+}
+
+let socialLinks = [
+  { href: '/#', name: 'Twitter' },
+  { href: 'https://t.me/flowprotocol', name: 'Telegram' },
+  { href: '/#', name: 'Reddit' },
+];
+
+let flowLinks = [
+  { href: 'https://app.flowprotocol.io/dashboard', name: 'Dashboard' },
+  { href: 'https://app.flowprotocol.io/liquidity', name: 'Liquidity Mining' },
+  { href: 'https://flowprotocol.io/static/media/flow-protocol.df8f84c5.pdf', name: 'Whitepaper' },
+];
+
+let exchangeLinks = [
+  {
+    href: 'https://uniswap.info/token/0xc6e64729931f60d2c8bc70a27d66d9e0c28d1bf9',
+    name: 'Uniswap',
+  },
+  { href: 'https://www.coingecko.com/en/coins/flow-protocol', name: 'Coingecko' },
+  {
+    href: 'https://etherscan.io/token/0xC6e64729931f60D2c8Bc70A27D66D9E0c28D1BF9',
+    name: 'Etherscan',
+  },
+];
 
 const Footer: React.FC = () => (
-  <footer className='footer bg-white relative pt-1 border-b-2 border-blue-700'>
-    <div className='container mx-auto px-6'>
-      <div className='sm:flex sm:mt-8'>
-        <div className='mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between'>
-          <div className='flex flex-col hidden md:block mt-4'>
-            <div className='flex items-center text-xl md:text-2xl justify-between'>
-              <span className='flex items-center'>
-                <DarkLogo />
-                Flow
-              </span>
-            </div>
-            <span className='inline-block w-auto max-w-sm'>
-              Flow is a protocol that establishes an Ethereum based self-distributing store of value
-              token (FLOW). FLOW is designed to be a hedge against Bitcoin as today's primary
-              digital store of value.
-            </span>
-          </div>
-          <div className='flex flex-col'>
-            <span className='font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-2'>Socials</span>
-            <span className='my-2'>
-              <a href='#' className='text-blue-700 text-md hover:text-blue-500'>
-                Telegram
-              </a>
-            </span>
-            <span className='my-2'>
-              <a href='#' className='text-blue-700  text-md hover:text-blue-500'>
-                Twitter
-              </a>
-            </span>
-            <span className='my-2'>
-              <a href='#' className='text-blue-700 text-md hover:text-blue-500'>
-                Reddit
-              </a>
-            </span>
-          </div>
-          <div className='flex flex-col'>
-            <span className='font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-2'>Links</span>
-            <span className='my-2'>
-              <a
-                href='https://flowprotocol.io'
-                className='text-blue-700 text-md hover:text-blue-500'>
-                Home
-              </a>
-            </span>
-            <span className='my-2'>
-              <a
-                href='https://app.flowprotocol.io'
-                className='text-blue-700  text-md hover:text-blue-500'>
-                Dashboard
-              </a>
-            </span>
-            <span className='my-2'>
-              <a
-                href='https://flowprotocol.io/static/media/flow-protocol.df8f84c5.pdf'
-                className='text-blue-700 text-md hover:text-blue-500'>
-                Whitepaper
-              </a>
-            </span>
-          </div>
-          <div className='flex flex-col'>
-            <span className='font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-2'>FLOW</span>
-            <span className='my-2'>
-              <a
-                href='https://etherscan.io/token/0xC6e64729931f60D2c8Bc70A27D66D9E0c28D1BF9'
-                target='_BLANK'
-                rel='noopener noreferrer'
-                className='text-blue-700  text-md hover:text-blue-500'>
-                Etherscan
-              </a>
-            </span>
-            <span className='my-2'>
-              <a
-                href='https://uniswap.info/token/0xc6e64729931f60d2c8bc70a27d66d9e0c28d1bf9'
-                target='_BLANK'
-                rel='noopener noreferrer'
-                className='text-blue-700  text-md hover:text-blue-500'>
-                Uniswap
-              </a>
-            </span>
-            <span className='my-2'>
-              <a
-                href='https://www.coingecko.com/en/coins/flow-protocol'
-                target='_BLANK'
-                rel='noopener noreferrer'
-                className='text-blue-700  text-md hover:text-blue-500'>
-                Coingecko
-              </a>
-            </span>
-          </div>
-        </div>
+  <footer>
+    <div className='container mx-auto flex flex-col'>
+      <div className=' flex  justify-around py-4 text-sm sm:text-base'>
+        <FooterItem title='Social' linkArr={socialLinks} />
+        <FooterItem title='Flow' linkArr={flowLinks} />
+        <FooterItem title='Links' linkArr={exchangeLinks} />
       </div>
     </div>
-    <div className='container mx-auto px-6'>
-      <div className='mt-16 flex flex-col items-center'>
-        <div className='sm:w-2/3 text-center py-6'>
-          <p className='text-sm text-blue-700 font-bold mb-2'>© 2020 Flow Protocol</p>
-        </div>
-      </div>
-    </div>
+    <p className='text-sm font-bold bg-primary py-2 mt-8 text-center'>© 2020 Flow Protocol</p>
   </footer>
 );
+
+const FooterItem: React.FC<IFooterItem> = ({ title, linkArr }) => {
+  return (
+    <div className='flex flex-col text-center space-y-2'>
+      <h4>{title}</h4>
+      {Array.isArray(linkArr) &&
+        linkArr.map((link, key) => {
+          return (
+            <a key={key} href={link.href} rel='noopener noreferrer' target='_blank'>
+              {link.name}
+            </a>
+          );
+        })}
+    </div>
+  );
+};
 
 export { Footer };
