@@ -8,7 +8,7 @@ const Header: React.FC = () => {
   return (
     <header className='bg-secondary'>
       <nav className='container mx-auto md:flex items-center justify-between flex-wrap px-5 sm:px-0 py-5 text-white'>
-        <div className='flex text-xl md:text-2xl justify-between'>
+        <div className='flex text-xl md:text-xl justify-between'>
           <span className='flex items-center'>
             <LogoAlternative /> Flow
           </span>
