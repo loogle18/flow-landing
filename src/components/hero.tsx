@@ -15,14 +15,15 @@ const Hero: React.FC<IHero> = ({ flowprice }) => {
       <div className='container mx-auto flex'>
         <div className='flex-1'>
           <h1 className='text-2xl sm:text-4xl sm:text font-bold border-primary md:border-l-4 md:pl-4 mb-4'>
-            The self-distributing store of value token with daily intrest.
+            The self-distributing store of value token with daily rewards.
           </h1>
           <p className='sm:text-lg font-light'>
-            Flow is a protocol that establishes an Ethereum based self-distributing store of value
-            token (FLOW). FLOW is designed to be a hedge against Bitcoin as today's primary digital
-            store of value.
+            FLOW features non-dilutive transactionless inflation, automatically increasing the balance of each holder daily without the need for a single transaction.
           </p>
-
+          <br/>
+          <p className='sm:text-lg font-light'>
+            The protocol gradually decreases inflation over time and ends with a capped supply, making FLOW an ideal store of value and a hedge against BTC.
+          </p>
           <h3 className='text-lg my-10'>
             Current price per Flow is ${Number(flowprice).toFixed(2)}
           </h3>

@@ -51,7 +51,7 @@ const Landing: React.FC = () => {
             value to flunctuate wildy due to delays in the network, bugs, etc.{' '}
           </li>
           <li>
-            Coins that require actions such as taking in order to receive a portion of the inflation
+            Coins that require actions such as staking in order to receive a portion of the inflation
             prevent the coin from being used easily in other applications (lending, collateral,
             etc.) without being diluted.
           </li>
@@ -59,12 +59,10 @@ const Landing: React.FC = () => {
       </Section>
       <Section
         image={Drops}
-        title='Liquditity Mining'
-        paragraph='As Defi Rapidly grows, so does the demand for collateral assets that fill specific roles.
-          FLOW (Store of Value) can help diversify collateral by being combined with digital assets
-          that fill other roles such as ETH (Protocol) and AMPL (Elastic Supply). FLOW does not need
-          to be staked or locked into a contract to receive inflation, therefore it can be applied
-          to the full range of DeFi applications while still achieving its distribution target.'
+        title='Liquidity Mining'
+        paragraph='The Flow Protocol liquidity mining program is almost here!  Soon holders will be able to earn extra FLOW tokens by providing liquidity on Uniswap.
+        Holders will be able to participate by pooling liquidity on Uniswap and staking the resulting UNI-V2 tokens.
+        The more tokens you stake and the longer you keep them staked for, the greater the rewards!'
       />
     </main>
   );
