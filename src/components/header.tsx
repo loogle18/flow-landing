@@ -28,15 +28,15 @@ const Header: React.FC = () => {
             rel='noopener noreferrer'>
             Whitepaper
           </a>
+          <a href='https://app.flowprotocol.io/yieldfarming' target='_BLANK' rel='noopener noreferrer'>Yield Farming</a>
+          <a href='https://app.flowprotocol.io/dashboard' target='_BLANK' rel='noopener noreferrer'>
+            Dashboard
+          </a>
           <a
-            href='https://github.com/flowprotocol/flow-contracts'
+            href='https://discord.gg/NtYXK8x'
             target='_BLANK'
             rel='noopener noreferrer'>
-            Github
-          </a>
-          <a href='#socials'>Connect</a>
-          <a href='https://flowprotocol.io/dashboard' target='_BLANK' rel='noopener noreferrer'>
-            Dashboard
+            Connect with Us
           </a>
         </div>
       </nav>
@@ -44,3 +44,4 @@ const Header: React.FC = () => {
   );
 };
 export { Header };
+
