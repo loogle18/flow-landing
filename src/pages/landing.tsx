@@ -51,9 +51,9 @@ const Landing: React.FC = () => {
             value to flunctuate wildy due to delays in the network, bugs, etc.{' '}
           </li>
           <li>
-            Coins that require actions such as staking in order to receive a portion of the inflation
-            prevent the coin from being used easily in other applications (lending, collateral,
-            etc.) without being diluted.
+            Coins that require actions such as staking in order to receive a portion of the
+            inflation prevent the coin from being used easily in other applications (lending,
+            collateral, etc.) without being diluted.
           </li>
         </ul>
       </Section>

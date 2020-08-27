@@ -19,7 +19,10 @@ let socialLinks = [
 let flowLinks = [
   { href: 'https://app.flowprotocol.io/dashboard', name: 'Dashboard' },
   { href: 'https://app.flowprotocol.io/liquidity', name: 'Liquidity Mining' },
-  { href: 'https://app.flowprotocol.io/static/media/flow-protocol.df8f84c5.pdf', name: 'Whitepaper' },
+  {
+    href: 'https://app.flowprotocol.io/static/media/flow-protocol.df8f84c5.pdf',
+    name: 'Whitepaper',
+  },
 ];
 
 let exchangeLinks = [
@@ -64,4 +67,3 @@ const FooterItem: React.FC<IFooterItem> = ({ title, linkArr }) => {
 };
 
 export { Footer };
-
