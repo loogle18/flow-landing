@@ -24,7 +24,7 @@ const Landing: React.FC = () => {
       <Section
         image={Defi}
         title='Designed for De-Fi'
-        paragraph=' As Defi Rapidly grows, so does the demand for collateral assets that fill specific roles.
+        paragraph=' As DeFi Rapidly grows, so does the demand for collateral assets that fill specific roles.
           FLOW (Store of Value) can help diversify collateral by being combined with digital assets
           that fill other roles such as ETH (Protocol) and AMPL (Elastic Supply). FLOW does not need
           to be staked or locked into a contract to receive inflation, therefore it can be applied
@@ -37,9 +37,9 @@ const Landing: React.FC = () => {
         paragraph='Until now, digital stores of value like Bitcoin have required participation in mining or staking in order to receive a portion of the inflating supply. This has several problems:'>
         <ul className='space-y-4 list-disc text-sm sm:text-base font-light p-5 sm:p-10 '>
           <li>
-            When a pure store of value (inflation eventually ending) is tied to consensus mechanism,
-            it disproportinally punishes holders as their share of the supply is continuously
-            diluted during the inflation period.
+            When a pure store of value (inflation eventually ending) is tied to a consensus
+            mechanism, it disproportionately punishes holders as their share of the supply is
+            continuously diluted during the inflation period.
           </li>
           <li>
             The long term value of these coins depends heavily on the ability of the protocol to
