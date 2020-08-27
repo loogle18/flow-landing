@@ -28,16 +28,14 @@ const Header: React.FC = () => {
             rel='noopener noreferrer'>
             Whitepaper
           </a>
-          <a href='https://github.com/flowprotocol' target='_BLANK' rel='noopener noreferrer'>Github</a>
-          <a href='https://app.flowprotocol.io/yieldfarming' target='_BLANK' rel='noopener noreferrer'>Liquidity Mining</a>
+          <a href='https://github.com/flowprotocol' target='_BLANK' rel='noopener noreferrer'>
+            Github
+          </a>
+          <a href='https://app.flowprotocol.io/liquidity' target='_BLANK' rel='noopener noreferrer'>
+            Liquidity Mining
+          </a>
           <a href='https://app.flowprotocol.io/dashboard' target='_BLANK' rel='noopener noreferrer'>
             Dashboard
-          </a>
-          <a
-            href='https://discord.gg/NtYXK8x'
-            target='_BLANK'
-            rel='noopener noreferrer'>
-            Connect with Us
           </a>
         </div>
       </nav>
@@ -45,4 +43,3 @@ const Header: React.FC = () => {
   );
 };
 export { Header };
-

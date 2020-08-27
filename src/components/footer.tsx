@@ -18,7 +18,7 @@ let socialLinks = [
 
 let flowLinks = [
   { href: 'https://app.flowprotocol.io/dashboard', name: 'Dashboard' },
-  { href: 'https://app.flowprotocol.io/yieldfarming', name: 'Liquidity Mining' },
+  { href: 'https://app.flowprotocol.io/liquidity', name: 'Liquidity Mining' },
   { href: 'https://flowprotocol.io/static/media/flow-protocol.df8f84c5.pdf', name: 'Whitepaper' },
 ];
 
