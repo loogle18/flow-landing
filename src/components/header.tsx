@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { ReactComponent as LogoAlternative } from '../assets/logo-light.svg';
 import { CgMenu, CgClose } from 'react-icons/cg';
+
+const LogoLight =
+  'https://raw.githubusercontent.com/flowprotocol/flow-media/master/svg/logo-light.svg';
 
 const Header: React.FC = () => {
   const [toggle, setToggle] = useState(false);
@@ -10,7 +12,7 @@ const Header: React.FC = () => {
       <nav className='container mx-auto md:flex items-center justify-between flex-wrap px-5 sm:px-0 py-5 text-white'>
         <div className='flex text-xl md:text-xl justify-between'>
           <span className='flex items-center'>
-            <LogoAlternative /> Flow
+            <img src={LogoLight} alt='logo-light' /> Flow
           </span>
           <button
             className='md:hidden text-2xl disable-zoom-tap'
