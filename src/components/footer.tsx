@@ -1,5 +1,4 @@
 import React from 'react';
-// import { ReactComponent as DarkLogo } from '../assets/logo-dark.svg';
 
 interface IFooterLink {
   href: string;
