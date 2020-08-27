@@ -11,15 +11,18 @@ interface IFooterItem {
 }
 
 let socialLinks = [
-  { href: '/#', name: 'Twitter' },
+  { href: 'https://discord.gg/NtYXK8x', name: 'Discord' },
+  { href: 'https://twitter.com/FlowProtocol', name: 'Twitter' },
   { href: 'https://t.me/flowprotocol', name: 'Telegram' },
-  { href: '/#', name: 'Reddit' },
 ];
 
 let flowLinks = [
   { href: 'https://app.flowprotocol.io/dashboard', name: 'Dashboard' },
   { href: 'https://app.flowprotocol.io/liquidity', name: 'Liquidity Mining' },
-  { href: 'https://flowprotocol.io/static/media/flow-protocol.df8f84c5.pdf', name: 'Whitepaper' },
+  {
+    href: 'https://app.flowprotocol.io/static/media/flow-protocol.df8f84c5.pdf',
+    name: 'Whitepaper',
+  },
 ];
 
 let exchangeLinks = [
