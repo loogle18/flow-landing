@@ -30,8 +30,8 @@ const Hero: React.FC<IHero> = ({ flowprice }) => {
             Current price per Flow is ${Number(flowprice).toFixed(2)}
           </h3>
           <div className='mt-10 space-x-10'>
-            <a href='https://discord.gg/NtYXK8x' target='_blank' rel='noopener noreferrer'>
-              <SecondaryButton text='Discord' />
+            <a href='https://t.me/flowprotocol' target='_blank' rel='noopener noreferrer'>
+              <SecondaryButton text='Telegram' />
             </a>
             <a
               href='https://app.uniswap.org/#/swap?outputCurrency=0xC6e64729931f60D2c8Bc70A27D66D9E0c28D1BF9'
