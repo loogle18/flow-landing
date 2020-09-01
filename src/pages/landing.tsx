@@ -3,6 +3,7 @@ import { Section, Hero } from '../components';
 import Drops from '../assets/drops.svg';
 import Defi from '../assets/defi.svg';
 import Block from '../assets/block.svg';
+import { PrimaryButton } from '../components/button';
 
 import axios from 'axios';
 import { apiUrl } from '../utils/constants';
@@ -22,14 +23,23 @@ const Landing: React.FC = () => {
     <main className='flex flex-col'>
       <Hero flowprice={currentPrice} />
       <Section
-        image={Defi}
-        title='Designed for De-Fi'
-        paragraph=' As DeFi Rapidly grows, so does the demand for collateral assets that fill specific roles.
-          FLOW (Store of Value) can help diversify collateral by being combined with digital assets
-          that fill other roles such as ETH (Protocol) and AMPL (Elastic Supply). FLOW does not need
-          to be staked or locked into a contract to receive inflation, therefore it can be applied
-          to the full range of DeFi applications while still achieving its distribution target.'
-      />{' '}
+        image={Drops}
+        title='Liquidity Mining'
+        paragraph='The Flow Protocol liquidity mining program is live!
+          Holders can now earn extra FLOW tokens by providing liquidity on Uniswap.'
+      >
+        <p className='font-light sm:text-lg mt-5'>
+          The more tokens you stake and the longer you keep them staked for, the greater the rewards!
+        </p>
+        <div className='mt-10 space-x-10'>
+          <a
+            href='https://medium.com/@flowprotocol/liquidity-mining-with-the-flow-tap-c7848cf798f5'
+            target='_blank'
+            rel='noopener noreferrer'>
+            <PrimaryButton text='Learn More' />
+          </a>
+        </div>
+      </Section>
       <Section
         image={Block}
         bgcolor='secondary'
@@ -58,11 +68,13 @@ const Landing: React.FC = () => {
         </ul>
       </Section>
       <Section
-        image={Drops}
-        title='Liquidity Mining'
-        paragraph='The Flow Protocol liquidity mining program is almost here!  Soon holders will be able to earn extra FLOW tokens by providing liquidity on Uniswap.
-        Holders will be able to participate by pooling liquidity on Uniswap and staking the resulting UNI-V2 tokens.
-        The more tokens you stake and the longer you keep them staked for, the greater the rewards!'
+        image={Defi}
+        title='Designed for De-Fi'
+        paragraph=' As DeFi Rapidly grows, so does the demand for collateral assets that fill specific roles.
+          FLOW (Store of Value) can help diversify collateral by being combined with digital assets
+          that fill other roles such as ETH (Protocol) and AMPL (Elastic Supply). FLOW does not need
+          to be staked or locked into a contract to receive inflation, therefore it can be applied
+          to the full range of DeFi applications while still achieving its distribution target.'
       />
     </main>
   );
