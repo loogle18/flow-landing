@@ -5,9 +5,10 @@ import Lottie from './lottie';
 
 interface IHero {
   flowprice: string;
+  tvl: number;
 }
 
-const Hero: React.FC<IHero> = ({ flowprice }) => {
+const Hero: React.FC<IHero> = ({ flowprice, tvl }) => {
   return (
     <section
       style={{ backgroundImage: `url(${Bubbles})` }}
@@ -26,8 +27,11 @@ const Hero: React.FC<IHero> = ({ flowprice }) => {
             The protocol gradually decreases inflation over time and ends with a capped supply,
             making FLOW an ideal store of value and a hedge against BTC.
           </p>
-          <h3 className='text-lg my-10'>
+          <h3 className='text-lg mt-10'>
             Current price per Flow is ${Number(flowprice).toFixed(2)}
+          </h3>
+          <h3 className='text-lg mt-5 mb-10'>
+            Total value locked (TVL) is ${Math.round(tvl).toLocaleString('en')}
           </h3>
           <div className='mt-10 space-x-10'>
             <a href='https://t.me/flowprotocol' target='_blank' rel='noopener noreferrer'>

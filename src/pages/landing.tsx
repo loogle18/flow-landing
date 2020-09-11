@@ -6,22 +6,28 @@ import Block from '../assets/block.svg';
 import { PrimaryButton } from '../components/button';
 
 import axios from 'axios';
-import { apiUrl } from '../utils/constants';
+import { coingeckoApiUrl, flowTvlUrl } from '../utils/constants';
 
 const Landing: React.FC = () => {
   const [currentPrice, setCurrentPrice] = useState('');
-
+  const [tvl, setTvl] = useState(0);
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios(apiUrl);
-      setCurrentPrice(result.data.tickers[0].converted_last['usd']);
+      const [priceResult, tvlResult] = await Promise.all([
+        axios(coingeckoApiUrl),
+        axios(flowTvlUrl)
+      ]);
+      const price = priceResult.data.tickers[0].converted_last['usd'];
+      const tvl = tvlResult.data.tvl;
+      setCurrentPrice(price);
+      setTvl(tvl);
     };
     fetchData();
   }, []);
 
   return (
     <main className='flex flex-col'>
-      <Hero flowprice={currentPrice} />
+      <Hero flowprice={currentPrice} tvl={tvl} />
       <Section
         image={Drops}
         title='Liquidity Mining'
